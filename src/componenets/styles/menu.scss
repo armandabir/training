@@ -1,0 +1,32 @@
+.foods-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    div{
+        width: 200px;
+        margin-top: 10px;
+        padding: 10px;
+        text-align: center
+    }
+}
+
+.bt-container{
+    text-align: center;
+}
+button{
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.bt-light{
+    color: black;
+    background-color: goldenrod;
+}
+
+.bt-dark{
+    color: white;
+    background-color: rebeccapurple;
+}

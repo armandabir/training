@@ -1,12 +1,13 @@
 import Card from "../UI/Card";
-import { useEffect,useState } from "react";
+import { useContext, useEffect,useState } from "react";
 
-
+import "./../styles/menu.scss"
+import { ThemeContext } from "../../App";
 
   
 export default function foods(){
     const [foods,setFoods]=useState([])
-
+    const theme=useContext(ThemeContext)
     async function fetchfoods(cat = ""){
         const res= await fetch(`http://localhost:3131/foods/${cat}`)
         const data= await res.json()
@@ -20,13 +21,17 @@ export default function foods(){
     return (
 
         <>
-
-          <button onClick={()=>fetchfoods("Pizzas")}>Pizzas</button>
-          <button onClick={()=>fetchfoods("Burgers")}>Burgers</button>
-          <button onClick={()=>fetchfoods("Drinks")}>Drinks</button>
-         {
-            foods.map((food)=><Card key={food.id} title={food.name} price={food.price} image={food.image} />)
-          }
+          <div className="bt-container">
+            <button onClick={()=>fetchfoods("Pizzas")} className={`bt-${theme}`}>Pizzas</button>
+            <button onClick={()=>fetchfoods("Burgers")} className={`bt-${theme}`}>Burgers</button>
+            <button onClick={()=>fetchfoods("Drinks")} className={`bt-${theme}`}>Drinks</button>
+          </div>
+      
+          <div className="foods-container">
+            {
+              foods.map((food)=><Card key={food.id} title={food.name} price={food.price} image={food.image} />)
+            }
+          </div>
 
          
 
