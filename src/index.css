@@ -45,7 +45,6 @@ h1 {
   font-weight: 700;
   font-size: 2rem;
   margin: 0;
-  color: #ffc404;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
@@ -62,11 +61,37 @@ h1 {
 }
 
 .meal-item {
-  background-color: #1d1a16;
+
   border-radius: 1rem;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.color-dark{
+  color: #ffc404;
+}
+
+.color-light{
+  color: white;
+}
+
+
+
+.light{
+  background-color: white;
+}
+
+.light-text{
+  color: black;
+}
+
+.dark{
+  background-color: #1d1a16;
+}
+
+.dark-text{
+  color: white;
 }
 
 .meal-item article {
@@ -207,11 +232,19 @@ h1 {
 .button {
   font: inherit;
   cursor: pointer;
-  background-color: #ffc404;
+
   border: 1px solid #ffc404;
   color: #1f1a09;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+}
+
+.button-dark{
+  background-color: #ffc404;
+}
+
+.button-light{
+  background-color: white;
 }
 
 .button:hover,
@@ -226,7 +259,7 @@ h1 {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  color: #ffc404;
+
 }
 
 .text-button:hover,
