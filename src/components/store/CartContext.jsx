@@ -23,7 +23,7 @@ function cartRediucer(state,action){
                 updateItems=[...updateItems,updateItem]
                 
             }
-            console.log(updateItems)
+            // console.log(updateItems)
             return {items:updateItems}
             break;
         case "removeCart":
@@ -39,7 +39,7 @@ function cartRediucer(state,action){
                    }
     
                 }
-               console.log(updateItems)
+            //    console.log(updateItems)
                return {items:updateItems}
              break;
 
